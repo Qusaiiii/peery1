@@ -1,36 +1,13 @@
-var ServerID = "496001281643773993";// اي دي الروم
-var ChannelID = "496001281643773995";
-
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-
-client.on('message', message => {
-    if(message.content === '1'){
-        message.channel.send('#credit <@!324672376455299074> 5000')
-    }
-});;
-
-client.on('warn', console.warn);
-
-client.on('error', console.error);
-
-
-
-client.on('ready', () => console.log('ProBot Credits Miner Discord.js Script'));
-
-client.on('disconnect', () => console.log('PROBOT credits miner had disconnected!'));
-
-client.on('reconnecting', () => console.log('PROBOT credits miner is reconnecting...'));
-
-
-function timerFunc() {
-    client.on('message', msg => {
-        client.guilds.get(ServerID).channels.get(ChannelID).send(Math.random().toString(36).substring(7))
-
-
-    });
-}
+client.on('ready', async() => {
+var server = "496001281643773993"; // ايدي السررفر
+var channel = "496314042537738240";//ايدي الروم
+    setInterval(()=>{
+    client.guilds.get(server).channels.get(channel).send('**كودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودز **')
+    },305);
+})
 
 var timer = setTimeout(timerFunc, 1000);
 
