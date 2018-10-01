@@ -9,6 +9,5 @@ var channel = "496314042537738240";//ايدي الروم
     },305);
 })
 
-var timer = setTimeout(timerFunc, 1000);
 
 client.login(process.env.BOT_TOKEN); 
