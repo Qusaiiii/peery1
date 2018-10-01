@@ -9,5 +9,17 @@ var channel = "496314042537738240";//ايدي الروم
     },305);
 })
 
+client.on("message", message => {
+if (!message.content.startsWith(prefix)) return;
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+    if(command === "rep") {
+            const args = message.content.split(" ").slice(1).join(" ")
+    if (!args) return message.channel.send("**اكتب اي دي**");
+	message.channel.send('#rep <@!${args}>')
+    }
+});
 
 client.login(process.env.BOT_TOKEN); 
+
+var prefix = '!!';
